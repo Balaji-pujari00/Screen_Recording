@@ -5,8 +5,8 @@ from win32api import GetSystemMetrics
 width=GetSystemMetrics(0)
 height=GetSystemMetrics(1)
 
-fourcc=cv2.VideoWriter.fourcc('1','2','3','4')
-captures=cv2.VideoWriter('code',fourcc,20.0,(width,height))
+fourcc=cv2.VideoWriter.fourcc('m','p','4','v')
+captures=cv2.VideoWriter('code.mp4',fourcc,20.0,(width,height))
 while True:
     image = ImageGrab.grab(bbox=(0, 0, width,height))
     image_n = np.array(image)
